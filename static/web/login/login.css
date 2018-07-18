@@ -1,0 +1,8 @@
+.vertical-middle {
+    margin-top: 150px;
+}
+
+.row {  
+     display: table-cell;  
+     vertical-align: middle;  
+}

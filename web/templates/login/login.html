@@ -1,0 +1,127 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bootstrap 实例</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="{% static '/css/bootstrap.css' %}">
+  <link rel="stylesheet" href="{% static '/web/user/user.css' %}">
+  <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/popper.js/1.12.5/umd/popper.min.js"></script>
+  <script src="https://cdn.bootcss.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+</head>
+<body style="margin-top:80px">
+{% include 'public/nav.html' %}
+<div class="container">
+        <form class="form-horizontal" style="padding: 30px 100px 10px;" action="">
+                <fieldset>
+                    <legend>注册账号</legend>
+                </fieldset>
+        
+                <div class="form-group">
+                    <label for="account" class="col-sm-2 control-label">账户：</label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control" id="account">
+                    </div>
+                </div>
+        
+                <div class="form-group">
+                    <label for="phone" class="col-sm-2 control-label">手机号码：</label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control" id="phone">
+                    </div>
+                </div>
+        
+                <div class="form-group">
+                    <label for="verificationCode" class="col-sm-2 control-label">短信校验码：</label>
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control" id="verificationCode"
+                            name="verificationCode" placeholder="输入手机验证码">
+                    </div>
+                    <div style="display: inline">
+                        <button type="button" class="btn btn-info">获取验证码</button>
+                    </div>
+                </div>
+        
+                <div class="form-group">
+                    <label for="password" class="col-sm-2 control-label">密码：</label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control" id="password"
+                            name="password">
+                    </div>
+                    <div style="display: inline">
+                        <label class="help-block">6-16位字母、数字、符号、区分大小写</label>
+                    </div>
+                </div>
+        
+                <div class="form-group">
+                    <label for="conpsw" class="col-sm-2 control-label">再输一次：</label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control" id="conpsw">
+                    </div>
+                </div>
+        
+                <div class="form-group">
+                    <label for="nickname" class="col-sm-2 control-label">昵称：</label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control" id="nickname">
+                    </div>
+                </div>
+        
+                <div class="form-group">
+                    <label for="realname" class="col-sm-2 control-label">真实姓名：</label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control" id="realname"
+                            placeholder="输入真实姓名">
+                    </div>
+                    <div style="display: inline">
+                        <label class="help-block">真实姓名</label>
+                    </div>
+                </div>
+        
+                <div class="form-group">
+                    <label for="sex" class="col-sm-2 control-label">性别：</label>
+                    <div class="col-sm-4">
+                        &nbsp; &nbsp;<input type="radio" name="sex" id="sex_m" value="男"
+                            checked="checked"> &nbsp;男 &nbsp; &nbsp; &nbsp; &nbsp;
+                        &nbsp; &nbsp;<input type="radio" name="sex" id="sex_w" value="女">
+                        &nbsp;女
+                    </div>
+                </div>
+        
+                <div class="form-group">
+                    <label for="IdentificationCard" class="col-sm-2 control-label">身份证号：</label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control" id="IdentificationCard">
+                    </div>
+                </div>
+        
+                <div class="form-group">
+                    <label for="email" class="col-sm-2 control-label">Email：</label>
+                    <div class="col-sm-4">
+                        <input type="email" class="form-control" id="email"
+                            placeholder="Email">
+                    </div>
+                </div>
+        
+                <div class="form-group">
+                    <label for="address" class="col-sm-2 control-label">地址：</label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control" id="address">
+                    </div>
+                </div>
+        
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-3">
+        
+                        <div class="checkbox">
+                            <label><input type="checkbox">我已阅读并接受</label> <a href="#"
+                                style="text-decoration: underline;" target="_blank">注册条款</a>
+                        </div>
+                    </div>
+                </div>
+            </form>
+{% include 'public/foot.html' %}
+</body>
+</html>

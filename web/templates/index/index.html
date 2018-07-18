@@ -1,0 +1,28 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bootstrap 实例</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+  <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/popper.js/1.12.5/umd/popper.min.js"></script>
+  <script src="https://cdn.bootcss.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+</head>
+<body  style="height:1500px">
+
+{% include 'public/nav.html' %}
+
+<div class="container-fluid" style="margin-top:80px">
+  <h1>大屏动态显示</h1>
+  <p>1.zone总个数统计</p>
+  <p>2.rr解析总个数</p>
+  <p>3.解析次数统计</p>
+</div>
+
+{% include 'public/foot.html' %}
+
+</body>
+</html>

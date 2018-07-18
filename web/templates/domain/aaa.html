@@ -1,0 +1,56 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bootstrap 实例</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="{% static '/css/bootstrap.css' %}">
+</head>
+<body  style="height:1500px">
+
+{% include 'public/nav.html' %}
+
+<div class="container" style="margin-top:80px">
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <td>域名</td>
+                <td>域名类型</td>
+                <td>域名状态</td>
+                <td>操作</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>baidu.com</td>
+                <td>公网域名</td>
+                <td>正常</td>
+                <td>管理</td>
+            </tr>
+            <tr>
+                <td>yanfa.com</td>
+                <td>内网域名</td>
+                <td>正常</td>
+                <td>管理</td>
+            </tr>
+            <tr>
+                <td>test.com</td>
+                <td>内网域名</td>
+                <td>正常</td>
+                <td>管理</td>
+            </tr>
+            <tr>
+                <td>qq.com</td>
+                <td>公网域名</td>
+                <td>停止</td>
+                <td>管理</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+{% include 'public/foot.html' %}
+</body>
+</html>

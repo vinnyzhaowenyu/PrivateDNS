@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bootstrap 实例</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="{% static '/css/bootstrap.css' %}">
+  <link rel="stylesheet" href="{% static '/web/user/user.css' %}">
+  <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/popper.js/1.12.5/umd/popper.min.js"></script>
+  <script src="https://cdn.bootcss.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+</head>
+<body style="margin-top:80px">
+{% include 'public/nav.html' %}
+<div class="container">
+
+    <div class="row">
+        <div class="col-md-8">
+            <h1> privateDNS </h1>
+        </div>
+        <div class="col-md-4">
+            login
+        </div>
+    </div>
+
+</div>
+{% include 'public/foot.html' %}
+</body>
+</html>
