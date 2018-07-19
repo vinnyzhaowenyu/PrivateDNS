@@ -8,6 +8,34 @@ yum clean all && yum makecache
 yum install bind -y
 ```
 #### Python3 安装
-
+```
+ar xf Python-3.5.5.tgz  -C /usr/local/src/
+cd /usr/local/src/
+cd Python-3.5.5/
+./configure --prefix=/usr/local/privateDNS/Python355
+make
+make install
+```
 #### Django2 安装
+```
+tar xf Django-2.0.4.tar.gz  -C /usr/local/src/
+cd /usr/local/src/
+cd Django-2.0.4/
+python3.5 setup.py   install
+```
+## 初始化项目
+```
+django-admin startproject privateDNS
+cd privateDNS/
+python3.5 manage.py  startapp web
+python3.5 manage.py  startapp api
+```
 
+```
+yum openssl openssl-devel
+https://www.python.org/ftp/python/3.5.5/Python-3.5.5.tgz
+echo 'export PATH=/usr/local/privateDNS/Python-3.6.5/bin:$PATH' >> /etc/profile
+source /etc/profile
+https://www.djangoproject.com/m/releases/2.0/Django-2.0.4.tar.gz
+https://pypi.python.org/packages/73/5b/2a8d31d391af5e2c86fc47e37ba4e159d64fda0022bef999e77060742e3f/pytz-2018.3-py3.5.egg#md5=fc2aa5496659dbbb68fee4e8ff56a962
+```

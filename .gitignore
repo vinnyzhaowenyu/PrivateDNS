@@ -1,1 +1,4 @@
 *.pyc
+*.gz
+*.tgz
+*.sqlite3
