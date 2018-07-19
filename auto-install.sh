@@ -2,7 +2,7 @@
 # 自动安装脚本
 init(){
 
-    yum install gcc make -y
+    yum install gcc make sqlite sqlite-devel-y
 
     echo "init"
     TMP="/tmp/django-python-tmp-dir"
@@ -42,10 +42,12 @@ install(){
     ./configure --prefix=/usr/local/Python355
     make
     make install 
+    /usr/local/Python355/bin/pip3  install --upgrade pip
     cd -
 
     cd "$TMP/$django_ver"
-    /usr/local/Python355/bin/python3.5  setup.py   install
+    /usr/local/Python355/bin/python3.5  setup.py install
+    /usr/local/Python355/bin/pip install djangorestframework
     cd -
 }
 
