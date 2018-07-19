@@ -39,13 +39,13 @@ install(){
     fi
 
     cd "$TMP/$python_ver"  
-    ./configure --prefix=/usr/local/privateDNS/Python355
+    ./configure --prefix=/usr/local/Python355
     make
     make install 
     cd -
 
     cd "$TMP/$django_ver"
-    /usr/local/privateDNS/Python355/bin/python3.5  setup.py   install
+    /usr/local/Python355/bin/python3.5  setup.py   install
     cd -
 }
 
