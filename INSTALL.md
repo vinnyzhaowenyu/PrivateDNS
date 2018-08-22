@@ -30,10 +30,9 @@ cd Django-2.1/
 ```
 ## 初始化项目
 ```
-django-admin startproject privateDNS
-cd privateDNS/
-python3.5 manage.py  startapp web
-python3.5 manage.py  startapp api
+/usr/local/PrivateDNS/Python370/bin/django-admin startproject PrivateDNS
+/usr/local/PrivateDNS/Python370/bin/python3 manage.py  startapp web
+/usr/local/PrivateDNS/Python370/bin/python3 manage.py  startapp api
 ```
 后续的不需要在初始化了
 ```
