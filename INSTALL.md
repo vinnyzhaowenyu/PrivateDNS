@@ -5,23 +5,23 @@
 ```
 cp conf/aliyun.repo  /etc/yum.repos.d/
 yum clean all && yum makecache
-yum install bind -y
+yum install bind bind-chroot bind-devel -y
 ```
 #### Python3 安装
 ```
-ar xf Python-3.5.5.tgz  -C /usr/local/src/
-cd /usr/local/src/
-cd Python-3.5.5/
-./configure --prefix=/usr/local/privateDNS/Python355
+wget https://www.python.org/ftp/python/3.7.0/Python-3.7.0.tgz
+tar xf Python-3.7.0.tgz 
+cd Python-3.7.0/ 
+./configure --prefix=/usr/local/PrivateDNS/Python370
 make
 make install
 ```
 #### Django2 安装
 ```
-tar xf Django-2.0.4.tar.gz  -C /usr/local/src/
-cd /usr/local/src/
-cd Django-2.0.4/
-python3.5 setup.py   install
+wget https://www.djangoproject.com/m/releases/2.1/Django-2.1.tar.gz
+tar xf Django-2.1.tar.gz 
+cd Django-2.1/
+/usr/local/privateDNS/Python70/bin/python3 setup.py install
 ```
 ## 初始化项目
 ```
