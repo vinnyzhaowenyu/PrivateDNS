@@ -10,7 +10,7 @@ yum install bind bind-chroot bind-devel -y
 
 #### Python3 安装
 ```
-yum install libffi-devel gcc make sqlite sqlite-devel -y 
+yum install  openssl openssl-devel libffi-devel gcc make sqlite sqlite-devel -y 
 wget https://www.python.org/ftp/python/3.7.0/Python-3.7.0.tgz
 tar xf Python-3.7.0.tgz 
 cd Python-3.7.0/ 
@@ -42,14 +42,5 @@ cp -r /root/PrivateDNS/PrivateDNS  /usr/local/PrivateDNS/
 
 ## 运行
 ```
-/usr/local/privateDNS/Python355/bin/python3.5 manage.py runserver 0.0.0.0:8080
-```
-
-```
-yum openssl openssl-devel
-https://www.python.org/ftp/python/3.5.5/Python-3.5.5.tgz
-echo 'export PATH=/usr/local/privateDNS/Python-3.6.5/bin:$PATH' >> /etc/profile
-source /etc/profile
-https://www.djangoproject.com/m/releases/2.0/Django-2.0.4.tar.gz
-https://pypi.python.org/packages/73/5b/2a8d31d391af5e2c86fc47e37ba4e159d64fda0022bef999e77060742e3f/pytz-2018.3-py3.5.egg#md5=fc2aa5496659dbbb68fee4e8ff56a962
+/usr/local/PrivateDNS/Python370/bin/python3  /usr/local/PrivateDNS/PrivateDNS/manage.py runserver 0.0.0.0:5055
 ```
